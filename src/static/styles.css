@@ -22,6 +22,59 @@ header {
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+  position: relative;
+}
+
+.header-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+  padding-right: 10px;
+}
+
+.admin-menu-wrapper {
+  position: relative;
+}
+
+.user-menu-button {
+  background-color: #fff;
+  color: #1a237e;
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #c5cae9;
+}
+
+.user-menu-button:hover {
+  background-color: #e8eaf6;
+}
+
+.admin-panel {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  width: 220px;
+  background: #fff;
+  color: #333;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+  z-index: 20;
+  text-align: left;
+}
+
+.admin-status {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.admin-panel button {
+  width: 100%;
+  margin-top: 6px;
 }
 
 header h1 {
@@ -186,6 +239,46 @@ button:hover {
   background-color: #d1ecf1;
   color: #0c5460;
   border: 1px solid #bee5eb;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: min(92vw, 420px);
+}
+
+.modal-content h3 {
+  margin-bottom: 15px;
+  color: #1a237e;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-actions button {
+  flex: 1;
+}
+
+.secondary-button {
+  background-color: #eceff1;
+  color: #263238;
+}
+
+.secondary-button:hover {
+  background-color: #cfd8dc;
 }
 
 .hidden {

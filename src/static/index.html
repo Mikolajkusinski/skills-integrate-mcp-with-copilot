@@ -8,6 +8,16 @@
   </head>
   <body>
     <header>
+      <div class="header-top">
+        <div class="admin-menu-wrapper">
+          <button id="user-menu-button" class="user-menu-button" aria-label="Open user menu">👤</button>
+          <div id="admin-panel" class="admin-panel hidden">
+            <div id="admin-status" class="admin-status">Not logged in</div>
+            <button id="login-button" type="button">Teacher Login</button>
+            <button id="logout-button" type="button" class="hidden">Logout</button>
+          </div>
+        </div>
+      </div>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
     </header>
@@ -23,6 +33,9 @@
 
       <section id="signup-container">
         <h3>Sign Up for an Activity</h3>
+        <p id="auth-required-message" class="info">
+          Teacher login is required to register or unregister students.
+        </p>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
@@ -44,6 +57,26 @@
     <footer>
       <p>&copy; 2023 Mergington High School</p>
     </footer>
+
+    <div id="login-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Teacher Login</h3>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="teacher-username">Username:</label>
+            <input type="text" id="teacher-username" required />
+          </div>
+          <div class="form-group">
+            <label for="teacher-password">Password:</label>
+            <input type="password" id="teacher-password" required />
+          </div>
+          <div class="modal-actions">
+            <button type="submit">Login</button>
+            <button id="cancel-login" type="button" class="secondary-button">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>
